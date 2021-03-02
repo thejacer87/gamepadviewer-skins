@@ -1,0 +1,339 @@
+/*BEGIN SN30 Pro+ Controller Styling*/
+/*This class defines the base attributes of the skin*/
+.controller {
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.controller.custom{
+    /* The background image is basically the base for the controller's skin. The 
+    PS3 controller's skin can be found at http://mrmcpowned.com/gamepad/ps3-assets/base.png
+    and you can observe it as an example. The sticks, buttons, and directional arrows are missing
+    because their appropriate elements will be incorperated when their styling is defined below.
+    The entirity of the skin's visual styling is done via background images and CSS sprites. */
+    background: url(base.svg);
+    background-size: 800px auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 700px;
+    width: 800px;
+}
+.custom.disconnected { /* This class shows an image when the controller is disconnected */
+    background: url(disconnected.svg);
+    background-size: 800px auto;
+    background-repeat: no-repeat;
+}
+/* This hides the controller's button when disconnected so only the background image remains */ 
+.custom.disconnected div {
+    display: none;
+}
+.custom .triggers{ /* The triggers are housed inside a div, so this sizes the div properly and positions it */
+    width: 680px;
+    height: 53px;
+    position: absolute;
+    left: 60px;
+    top: 11px;
+    opacity:1;
+}
+.custom .trigger{/* These are the actual triggers themselves */
+    width:235px;
+    height: 86px;
+}
+
+/* The left and right classes below are used to position the triggers
+within the div they're contained in. Since their positions is realtive
+to the size of the parent element, we simply resize the parent element 
+above to achieve the desired position. */
+.custom .trigger.left{
+    background: url(l2_lit.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    float: left;
+    opacity: 1;
+}
+.custom .trigger.left.pressed{ 
+}
+.custom .trigger.right{
+    background: url(r2_lit.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    float: right;
+    opacity: 1;
+}
+.custom .trigger.right.pressed{
+}
+/* The bumpers follow the same methodology as the triggers in terms of
+placement */
+.custom .bumper{
+    width: 239px;
+    height: 48px;
+}
+.custom .bumpers{
+    position: absolute;
+    width: 662px;
+    height: 50px;
+    left: 72px;
+    top: 86px;
+}
+.custom .bumper.pressed{ /* The '.pressed' class is used for most buttons to signify they've been pressed */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 1;
+}
+
+.custom .meta {
+    background: url(home.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 50px;
+    width: 50px;
+    left: 603px;
+    top: 365px;
+    position: absolute;
+}
+
+.custom .meta.pressed {
+    background: url(home_lit.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.custom .bumper.left{
+  background: url(l.svg);
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  float: left;
+}
+.custom .bumper.left.pressed{
+    background: url(l_lit.svg);
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    float: left;
+}
+.custom .bumper.right{
+    background: url(r.svg);
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    float: right;
+}
+.custom .bumper.right.pressed{
+    background: url(r_lit.svg);
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    float: right;
+}
+/* This bit of code is for the player indicator, which is represented in
+quandrants on the xbox controller. That's note what it's called on the
+PS3 controller but it'd be pointless for me to change the HTML for 
+something as pedantic as a name. */
+.custom .quadrant{
+    position: absolute;
+    background: url(led.svg);
+    background-size: 10px 25px;
+    background-repeat: no-repeat;
+    background-position-x: 45px;
+    height: 17px;
+    width: 60px;
+    top: 394px;
+    left: 371px;
+    opacity: 0;
+    overflow: hidden;
+}
+/* Since the player indicator is just a CSS sprite, we change the 
+position of the background to match the player number.
+NOTE: Player orderin starts at 0, so p0 = Player 1 */
+
+.custom .p0{
+    background-position: 0px 0px;
+    opacity: 1
+}
+.custom .p1{
+    background-position: 16px 0px;
+    opacity: 1
+}
+.custom .p2{
+    background-position: 32px 0px;
+    opacity: 1
+}
+.custom .p3{
+    background-position: 48px 0px;
+    opacity: 1
+}
+/* This is to size and position the containing div for the 
+start and select buttons. */
+.custom .arrows{
+    position: absolute;
+    width: 152px;
+    height: 65px;
+    top: 217px;
+    left: 325px;
+    /* background-color:  pink; */
+}
+/* Setting the size and CSS sprite for the start adn select buttons */
+.custom .back, .custom .start{
+    background: url(menu.svg);
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 75px;
+    height: 65px;
+    opacity: 1
+
+}
+.custom .back.pressed, .custom .start.pressed{
+    background: url(menu_lit.svg);
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 1;
+}
+.custom .back{
+    float: left;
+}
+.custom .start{
+    float: right;
+}
+/* Positioning and size of the container for the face buttons */
+.custom .abxy{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 150px;
+    right: 50px;
+}
+
+.custom .button{
+    position: absolute;
+    width: 82px;
+    height: 81px;
+    background: url(face.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.custom .button.pressed{
+    background: url(face_lit.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.custom .a{
+    top: 119px;
+    left: 89px;
+}
+.custom .b{
+    top: 65px;
+    left: 159px;
+}
+.custom .x{
+    top: 62px;
+    left: 15px;
+}
+.custom .y{
+    top: 8px;
+    left: 85px;
+}
+/* Analog sticks follow the same principles as the triggers in terms of positioning
+Note that the rotation of the sticks in hard coded with javascript, so it applies 
+the CSS inline. */
+.custom .sticks{
+    position: absolute;
+    width: 378px;
+    height: 134px;
+    top: 324px;
+    left: 245px;
+}
+.custom .stick{
+    position: absolute;
+    background: url(stick.svg);
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-position: 0 0;
+    height:134px;
+    width: 135px;
+}
+.custom .stick.pressed{
+    background: url(stick_lit.svg);
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-position: 0 0;
+}
+.custom .stick.left{
+    top: 0;
+    left: 0;
+}
+.custom .stick.right{
+    top: 0;
+    left: 216px;
+}
+/* Dpad possitioning and sizing */
+.custom .dpad{
+    position: absolute;
+    width: 196px;
+    height: 194px;
+    top: 157px;
+    left: 71px;
+    opacity: 100%;
+}
+.custom .face{
+    background: url(dpad.svg);
+    background-size: 70px 28px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: absolute;
+}
+.custom .face.pressed{
+    background: url(dpad_lit.svg);
+    background-size: 70px 28px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.custom .face.up{
+    left: 62px;
+    top: 18px;
+    -webkit-transform:
+    rotate(270deg);
+    width: 65px;
+    height: 39px;
+    
+}
+.custom .face.down{
+    left: 94px;
+    top: 114px;
+    -webkit-transform:
+    rotate(90deg);
+    width: 65px;
+    height: 80px;
+    opacity: 1;
+    
+}
+.custom .face.left{
+    top: 82px;
+    left: 10px;
+    -webkit-transform: rotate(180deg);
+    width: 65px;
+    height: 42px;
+    
+}
+.custom .face.right{
+    top: 68px;
+    left: 127px;
+    width: 65px;
+    height: 42px;
+    
+}
+
+/*END SN30 Pro+ Controller Styling*/
