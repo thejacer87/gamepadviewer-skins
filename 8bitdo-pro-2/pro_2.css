@@ -92,8 +92,8 @@ placement */
     background-position: center bottom;
     height: 50px;
     width: 50px;
-    left: 603px;
-    top: 365px;
+    left: 586px;
+    top: 390px;
     position: absolute;
 }
 
@@ -144,7 +144,7 @@ something as pedantic as a name. */
     background-position-x: 45px;
     height: 17px;
     width: 60px;
-    top: 394px;
+    top: 450px;
     left: 371px;
     opacity: 0;
     overflow: hidden;
