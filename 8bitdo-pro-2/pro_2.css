@@ -293,53 +293,40 @@ the CSS inline. */
 /* Dpad possitioning and sizing */
 .custom .dpad {
     position: absolute;
-    width: 196px;
-    height: 194px;
-    top: 191px;
-    left: 89px;
+    top: 227px;
+    left: 162px;
     opacity: 100%;
 }
 .custom .face {
     background: url('https://thejacer87.github.io/gamepadviewer-skins/8bitdo-pro-2/dpad.svg');
-    background-size: 70px 28px;
+    background-size: 55px 22px;
     background-repeat: no-repeat;
     background-position: center bottom;
     position: absolute;
+    width: 55px;
+    height: 22px;
+    opacity: 1;
 }
 .custom .face.pressed {
     background: url('https://thejacer87.github.io/gamepadviewer-skins/8bitdo-pro-2/dpad_lit.svg');
-    background-size: 70px 28px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
 }
 
 .custom .face.up {
-    left: 62px;
-    top: 18px;
     -webkit-transform: rotate(270deg);
-    width: 65px;
-    height: 39px;
 }
 .custom .face.down {
-    left: 94px;
-    top: 114px;
+    left: 1px;
+    top: 98px;
     -webkit-transform: rotate(90deg);
-    width: 65px;
-    height: 80px;
-    opacity: 1;
 }
 .custom .face.left {
-    top: 82px;
-    left: 10px;
+    top: 50px;
+    left: -48px;
     -webkit-transform: rotate(180deg);
-    width: 65px;
-    height: 42px;
 }
 .custom .face.right {
-    top: 68px;
-    left: 127px;
-    width: 65px;
-    height: 42px;
+    top: 49px;
+    left: 48px;
 }
 
 /*END SN30 Pro+ Controller Styling*/
