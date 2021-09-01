@@ -95,10 +95,10 @@ placement */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
-    height: 50px;
-    width: 50px;
-    left: 586px;
-    top: 390px;
+    height: 40px;
+    width: 40px;
+    left: 592px;
+    top: 400px;
     position: absolute;
 }
 
@@ -309,6 +309,9 @@ the CSS inline. */
 }
 .custom .face.pressed {
     background: url('https://thejacer87.github.io/gamepadviewer-skins/8bitdo-pro-2/dpad_lit.svg');
+    background-size: 55px 22px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 .custom .face.up {
