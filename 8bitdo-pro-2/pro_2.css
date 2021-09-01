@@ -36,6 +36,7 @@
     position: absolute;
     left: 60px;
     top: 26px;
+    top: 26px;
     opacity: 1;
 }
 .custom .trigger {
@@ -247,12 +248,12 @@ start and select buttons. */
     left: 59px;
 }
 .custom .x {
-    top: -106.5px;
-    left: 0px;
-}
-.custom .y {
     top: -53px;
     left: -59px;
+}
+.custom .y {
+    top: -106.5px;
+    left: 0px;
 }
 /* Analog sticks follow the same principles as the triggers in terms of positioning
 Note that the rotation of the sticks in hard coded with javascript, so it applies
@@ -294,8 +295,8 @@ the CSS inline. */
     position: absolute;
     width: 196px;
     height: 194px;
-    top: 157px;
-    left: 71px;
+    top: 191px;
+    left: 89px;
     opacity: 100%;
 }
 .custom .face {
